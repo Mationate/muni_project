@@ -9,7 +9,7 @@
       <li><a href="#" class="nav-link">Hola <%= current_user.name %>!</a></li>
       <li><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
     <% else %>
-      <li><%= link_to 'Inicia sesión', new_user_session_path, class: 'nav-link' %></li>
+      <li><%= link_to 'Ciudadano Inicia sesión', new_user_session_path, class: 'nav-link' %></li>
       <li><%= link_to 'Regístrate', new_user_registration_path, class: 'nav-link' %></li>
     <% end %>
     </ul>
