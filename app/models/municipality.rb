@@ -4,4 +4,12 @@ class Municipality < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :proyects
+
+  def current_ability
+    if admin_signed_in?
+      @current_ability ||= Ability.new(current_admin)
+    else
+      @current_ability ||= Ability.new(current_user)
+    end
+  end
 end
