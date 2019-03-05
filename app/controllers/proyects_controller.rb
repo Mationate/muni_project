@@ -1,4 +1,5 @@
 class ProyectsController < ApplicationController
+  before_action :set_proyect, only: [:edit, :update]
   def index
     @proyect = Proyect.new
     @proyects = Proyect.all
@@ -15,9 +16,24 @@ class ProyectsController < ApplicationController
     end
   end
 
+  def edit
+    redirect_to edit_proyect_path(@proyect)
+  end
+
+  def update
+    
+  end
+  
+  
+
   private
 
   def proyect_params
     params.require(:proyect).permit(:title, :description, :budget, :address, :start_date, :finish_date)
   end
+
+  def set_proyect
+    @proyect = Proyect.find(params[:id])
+  end
+  
 end
