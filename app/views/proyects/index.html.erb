@@ -3,8 +3,25 @@
 <%= render 'shared/form', proyect: @proyect %>
 
 
-<ul id="proyect-list">
-  <%= render @proyects %>
-</ul>
+<table id="proyect-list" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Presupuesto</th>
+      <th>Fecha de inicio</th>
+      <th>Fecha de término</th>
+      <th>Dirección</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      <%= render @proyects %>
+  </tbody>
+</table>
+
+
+  <ul id="proyect-list">
+  </ul>
 
 

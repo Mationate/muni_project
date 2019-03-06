@@ -17,7 +17,7 @@ class ProyectsController < ApplicationController
   end
 
   def edit
-    redirect_to edit_proyect_path(@proyect)
+    
   end
 
   def update

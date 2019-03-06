@@ -1,11 +1,9 @@
-<div id="<%= proyect.id %>">
-  <li><strong>Nombre del proyecto: </strong><%= proyect.title %></li>
-  <li><strong>Descripción: </strong><%= proyect.description %></li>
-  <li><strong>Presupuesto: </strong><%= proyect.budget %></li>
-  <li><strong>Fecha de inicio: </strong><%= proyect.start_date %></li>
-  <li><strong>Fecha de término: </strong><%= proyect.finish_date %></li>
-  <li><strong>Dirección: </strong><%= proyect.address %></li>
-  <%= link_to 'Editar', edit_proyect_path(proyect), data: {remote: true}, class:'btn btn-success btn-sm'%>
-  <br>
-  <br>
-</div>
+<tr id="<%= proyect.id %>">
+  <td> <%= proyect.title %></td>
+  <td> <%= proyect.description %></td>
+  <td> <%= proyect.budget %></td>
+  <td> <%= proyect.start_date %></td>
+  <td> <%= proyect.finish_date %></td>
+  <td> <%= proyect.address %></td>
+  <td> <%= link_to 'Editar', edit_proyect_path(proyect), class:'btn btn-success btn-sm'%></td>
+</tr>

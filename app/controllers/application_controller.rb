@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  devise_group :entity, contains: [:user, :company]
+  # current_entity
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
