@@ -1,5 +1,5 @@
 class ProyectsController < ApplicationController
-  before_action :set_proyect, only: [:edit, :update]
+  before_action :set_proyect, only: %i[show edit update]
   def index
     @proyect = Proyect.new
     @proyects = Proyect.all
@@ -15,6 +15,11 @@ class ProyectsController < ApplicationController
       redirect_to root_path, alert: 'Error al crear proyecto'
     end
   end
+
+  def show
+    respond_to :js
+  end
+  
 
   def edit
     

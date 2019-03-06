@@ -1,17 +1,11 @@
-<h1>Proyects#index</h1>
-
 <%= render 'shared/form', proyect: @proyect %>
-
-
 <table id="proyect-list" class="table table-striped">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Descripción</th>
       <th>Presupuesto</th>
-      <th>Fecha de inicio</th>
-      <th>Fecha de término</th>
-      <th>Dirección</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -20,8 +14,6 @@
   </tbody>
 </table>
 
-
-  <ul id="proyect-list">
-  </ul>
+<%= render 'shared/proyect_modal' %>
 
 

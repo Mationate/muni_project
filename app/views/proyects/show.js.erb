@@ -1,0 +1,3 @@
+$('.modal-title').text("<%= @proyect.title %>");
+$('.modal-body').html("<%= j render 'proyect_show', proyect: @proyect%>");
+$('.modal').modal('show');
