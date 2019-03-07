@@ -5,12 +5,14 @@ class Ability
 
     user ||= User.new
     case user
-    when User
-      can :create, Feedback
-      can :read, :all
     when Municipality
       can %i[create update], Proyect
       can :read, :all
+    when User
+      can :create, Feedback
+      can :read, :all
+    else
+      can :read, Proyect
     end
     # Define abilities for the passed in user here. For example:
     #
