@@ -9,7 +9,7 @@ class Ability
       can :create, Feedback
       can :read, :all
     when Municipality
-      can :manage, :all
+      can %i[create update], Proyect
       can :read, :all
     end
     # Define abilities for the passed in user here. For example:

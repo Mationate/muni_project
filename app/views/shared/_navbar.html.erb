@@ -7,7 +7,10 @@
     
     <ul class="navbar-nav ml-auto">
      <% if municipality_signed_in? %>
-      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createProyectModal">Crear un proyecto</button>
+      
+
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createProyectModal">Crear un proyecto</button>
+
       <li><a href="#" class="nav-link">Hola !</a></li>
       <li><%= link_to 'Cerrar sesión', destroy_municipality_session_path, method: :delete, class: 'nav-link' %></li>
     <% else %>

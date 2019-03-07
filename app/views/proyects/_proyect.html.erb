@@ -3,5 +3,9 @@
   <td> <%= proyect.description %></td>
   <td> <%= proyect.budget %></td>
   <td> <%= link_to 'Ver', proyect_path(proyect),data:{remote: true}, class:'btn btn-primary btn-sm' %></td>
-  <td> <%= link_to 'Editar', edit_proyect_path(proyect), class:'btn btn-success btn-sm'%></td>
+  
+  <% if can? :update, proyect %>
+    <td> <%= link_to 'Editar', edit_proyect_path(proyect), class:'btn btn-success btn-sm'%></td>
+  <% end %>
+  
 </tr>
