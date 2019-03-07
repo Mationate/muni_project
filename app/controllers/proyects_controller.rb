@@ -17,6 +17,8 @@ class ProyectsController < ApplicationController
   end
 
   def show
+    @feedback = Feedback.new
+    @feedbacks = @proyect.feedbacks.order('id DESC')
     respond_to :js
   end
   

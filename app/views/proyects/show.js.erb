@@ -1,3 +1,5 @@
-$('.modal-title').text("<%= @proyect.title %>");
-$('.modal-body').html("<%= j render 'proyect_show', proyect: @proyect%>");
-$('.modal').modal('show');
+$('#proyect-modal-title').text("<%= @proyect.title %>");
+$('#proyect-modal-body').html("<%= j render 'proyect_show', proyect: @proyect%>");
+$('#feedback-body').html("<%= j render 'shared/feedback_form', proyect: @proyect, feedback: @feedback %>");
+$('#feedback-body').append("<div id='feedbacks-container'><%= j render @feedbacks %></div>");
+$('#proyectModal').modal('show');

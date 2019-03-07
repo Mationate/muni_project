@@ -1,0 +1,7 @@
+<%= form_with(model: [proyect, feedback]) do |f| %>
+  <div class="form-group">
+    <%= f.label :content, "Deja aquí tu mensaje" %>
+    <%= f.text_field :content, class:'form-control feedback-input' %>
+  </div>
+  <%= f.submit "Enviar", class:'btn btn-primary btn-sm' %>
+<% end %>

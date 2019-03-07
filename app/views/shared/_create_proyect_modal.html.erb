@@ -1,0 +1,39 @@
+<div class="modal fade" id="createProyectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="card card-form my-5">
+      <div class="modal-content">
+        <div class="card-body">
+          <h5 class="card-title text-center">Crear un proyecto</h5>
+            <%= form_with(model: proyect) do |f| %>
+              <div class="form-label-group">
+                <%= f.label :title, "Titulo" %>
+                <%= f.text_field :title, class:'form-control proyect-input' %>
+              </div>
+              <div class="form-label-group">
+                <%= f.label :description, "Descripcion" %>
+                <%= f.text_area :description,class:'form-control proyect-input' %>
+              </div>
+              <div class="form-label-group">
+                <%= f.label :budget, "Presupuesto" %>
+                <%= f.text_field :budget,class:'form-control proyect-input' %>
+              </div>
+              <div class="form-label-group">
+                <%= f.label :address, "Dirección" %>
+                <%= f.text_field :address, class:'form-control proyect-input' %>
+              </div>
+              <div class="form-label-group">
+                <%= f.label :start_date, "Fecha de inicio" %>
+                <%= f.date_field :start_date, class:'form-control proyect-input' %>
+              </div>
+              <div class="form-label-group">
+                <%= f.label :finish_date, "Fecha de Término" %>
+                <%= f.date_field :finish_date, class:'form-control proyect-input' %>
+              </div>
+              <%= f.submit "Enviar", class:'btn btn-primary' %>
+              <%# , data: {remote: true ,dismiss: "modal"} %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
