@@ -1,3 +1,13 @@
+
+<% if user_signed_in? %>
+  <p>SOY UN USUARIO LOGGEADO</p>
+<% elsif municipality_signed_in? %>
+  <p>SOY UNA MUNI LOGGEADA</p>
+<% else %>
+  <p>SOY VISITA</p>
+<% end %>
+
+
 <table id="proyect-list" class="table table-striped">
   <thead>
     <tr>
