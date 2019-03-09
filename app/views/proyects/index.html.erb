@@ -1,4 +1,3 @@
-
 <% if user_signed_in? %>
   <p>SOY UN USUARIO LOGGEADO</p>
 <% elsif municipality_signed_in? %>
@@ -6,15 +5,12 @@
 <% else %>
   <p>SOY VISITA</p>
 <% end %>
-
-
 <table id="proyect-list" class="table table-striped">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Descripción</th>
       <th>Presupuesto</th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -23,7 +19,7 @@
   </tbody>
 </table>
 
-<%= render 'shared/create_proyect_modal', proyect: @proyect %>
+<%= render 'shared/create_proyect_modal', proyect: @new_proyect %>
 <%= render 'shared/proyect_modal' %>
 
 

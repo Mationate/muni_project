@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
 
-    user ||= User.new
+    user ||= nil
     case user
     when Municipality
       can %i[create update], Proyect

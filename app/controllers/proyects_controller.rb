@@ -21,10 +21,8 @@ class ProyectsController < ApplicationController
     @feedbacks = @proyect.feedbacks.order('id DESC')
     respond_to :js
   end
-  
 
   def edit
-    
   end
 
   def update

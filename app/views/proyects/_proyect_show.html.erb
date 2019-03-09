@@ -3,3 +3,6 @@
 <p><strong>Dirección:</strong> <%= proyect.address %></p>
 <p><strong>Fecha de inicio:</strong> <%= proyect.start_date %></p>
 <p><strong>Fecha de término:</strong> <%= proyect.finish_date %></p>
+<% if can? :update, proyect %>
+  <%= link_to 'Editar', edit_proyect_path(proyect), class:'btn btn-success btn-sm'%>
+<% end %>
