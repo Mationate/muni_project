@@ -6,7 +6,8 @@ class Ability
     user ||= nil
     case user
     when Municipality
-      can %i[create update], Proyect
+      can :create, Proyect
+      can :update, Proyect
       can :read, :all
     when User
       can :create, Feedback

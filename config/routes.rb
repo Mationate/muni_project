@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :proyects do
     resources :feedbacks, only: :create
   end
+  # resources :feedbacks, only: [] do 
+  #   resources :answers, only: :create
+  # end
+
   devise_for :municipalities, path: 'municipalities', controllers: {
     sessions: 'municipalities/sessions',
     registrations: 'municipalities/registrations'
