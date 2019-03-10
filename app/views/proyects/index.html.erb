@@ -1,3 +1,7 @@
+
+<div style='width: 99vw;'>
+  <div id="map" style='width: 99vw; height: 90vh;'></div>
+</div>
 <% if user_signed_in? %>
   <p>SOY UN USUARIO LOGGEADO</p>
 <% elsif municipality_signed_in? %>
@@ -22,4 +26,21 @@
 <%= render 'shared/create_proyect_modal', proyect: @proyect %>
 <%= render 'shared/proyect_modal' %>
 
+<script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({
+      provider: {
+        center: new google.maps.LatLng({lat: -33.4516359176471, lng: -70.6197884235294}),
+        zoom: 11
+      },
+      internal: {      
+        id: 'map'
+      }
+    },
+    function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);  
+      }
+    );
+</script>
+b
 

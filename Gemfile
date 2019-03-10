@@ -39,6 +39,9 @@ gem 'devise'
 gem 'activeadmin'
 gem 'cancancan'
 gem 'rails-i18n', '~> 5.1'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 
 group :development, :test do

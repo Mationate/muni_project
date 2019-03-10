@@ -3,6 +3,10 @@ class ProyectsController < ApplicationController
   def index
     @proyect = Proyect.new
     @proyects = Proyect.all
+    @hash = Gmaps4rails.build_markers(@proyects) do|proyect, marker|
+      marker.lat proyect.latitude  
+      marker.lng proyect.longitude
+    end
   end
 
   def create
@@ -34,7 +38,7 @@ class ProyectsController < ApplicationController
   private
 
   def proyect_params
-    params.require(:proyect).permit(:title, :description, :budget, :address, :start_date, :finish_date)
+    params.require(:proyect).permit(:title, :description, :budget, :address, :latitude, :longitude, :start_date, :finish_date)
   end
 
   def set_proyect
