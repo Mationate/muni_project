@@ -1,14 +1,7 @@
-
-<div style='width: 99vw;'>
-  <div id="map" style='width: 99vw; height: 90vh;'></div>
+<div id="map_container">
+  <div id="map"></div>
 </div>
-<% if user_signed_in? %>
-  <p>SOY UN USUARIO LOGGEADO</p>
-<% elsif municipality_signed_in? %>
-  <p>SOY UNA MUNI LOGGEADA</p>
-<% else %>
-  <p>SOY VISITA</p>
-<% end %>
+
 <table id="proyect-list" class="table table-striped">
   <thead>
     <tr>
@@ -26,33 +19,11 @@
 <%= render 'shared/create_proyect_modal', proyect: @proyect %>
 <%= render 'shared/proyect_modal' %>
 
-<script>
-  handler = Gmaps.build('Google');
-  handler.buildMap({
-      provider: {
-        center: new google.maps.LatLng({lat: -33.4516359176471, lng: -70.6197884235294}),
-        zoom: 11
-      },
-      internal: {      
-        id: 'map'
-      }
-    },
-    function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>); 
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-      results = [];
-			for (var i = 0; i <  markers.length; i++) {
-        marker = markers[i];
-				google.maps.event.addListener(marker.getServiceObject(), 'click', function(object) { 
-          $('#proyect-modal-title').text(marker.title);
-          $('#proyectModal').modal('show');
-          return true;
-					 //alert('lat: '+object.latLng.Na+' long: '+object.latLng.Oa);
-        });
-        results.push(true)
-			}
-    });
+<script id="map_script">
+  $(document).ready(function () {
+    <%= render 'googlemap', hash: @hash %>
+  });
+ 
 </script>
 
 

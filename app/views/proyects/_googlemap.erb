@@ -1,0 +1,43 @@
+handler = Gmaps.build('Google');
+handler.buildMap({
+    provider: {
+      center: new google.maps.LatLng({lat: -33.4516359176471, lng: -70.6197884235294}),
+      zoom: 11
+    },
+    internal: {      
+      id: 'map'
+    }
+  },
+  function(){
+    markers = <%= raw hash.to_json %>; // Fetch JSON with markers
+    Gmaps.store = {}; // Initialize storage
+    Gmaps.store.markers = markers.map(function(m) {
+      marker = handler.addMarker(m);
+      marker.serviceObject.set('id', m.id); 
+      marker.serviceObject.set('description', 'ahsodhaodh'); 
+      google.maps.event.addListener(marker.getServiceObject(), 'click', function(object) {
+        // FIXME: add info into modal for each marker
+        
+        $('#proyect-modal-title').text(m.title);
+        $('#proyectModal').modal('show');
+      });
+      return marker;
+    });
+    handler.bounds.extendWith(Gmaps.store.markers);
+    handler.fitMapToBounds();
+
+    //   markers_json = <%= raw hash.to_json %>;
+    //   markers = handler.addMarkers(markers_json); 
+    //   handler.bounds.extendWith(markers);
+    //   handler.fitMapToBounds();
+
+    //   for (var i = 0; i <  markers.length; i++) {
+    //     marker = markers[i];
+    //     google.maps.event.addListener(marker.getServiceObject(), 'click', function(object) {
+    //       marker.serviceObject.set('id', object.id);
+    //       $('#proyect-modal-title').text(marker.title);
+    //       $('#proyectModal').modal('show');
+    //     });
+    //   }
+  }
+);

@@ -3,17 +3,21 @@ class ProyectsController < ApplicationController
   def index
     @proyect = Proyect.new
     @proyects = Proyect.all
+    @feedback = Feedback.new
+    @feedbacks = @proyect.feedbacks.order('id DESC')
     @hash = Gmaps4rails.build_markers(@proyects) do|proyect, marker|
-      marker.lat proyect.latitude  
+
+      marker.lat proyect.latitude
       marker.lng proyect.longitude
-      marker.title proyect.title
+
+      marker.json({ title: proyect.title, id: proyect.id })
     end
+
   end
 
   def create
     @proyect = Proyect.new(proyect_params)
     @proyect.municipality = current_municipality
-
     if @proyect.save
       respond_to :js
     else

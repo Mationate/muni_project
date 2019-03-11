@@ -1,11 +1,9 @@
-
+// NAVBAR //
 .navbar {
 	margin-bottom: 0;
 	background: #444;
 	border: 0;
-
 }
-
 ul.navbar-nav {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 14px;
@@ -13,45 +11,36 @@ ul.navbar-nav {
 	font-weight: 400;
 	text-transform: uppercase;
 }
+// END NAVBAR //
 
 
-
-
-/***** MEDIA QUERIES *****/
-
+// MEDIA QUERIES //
 @media (min-width: 992px) and (max-width: 1199px) {}
 @media (min-width: 768px) and (max-width: 991px) {}
 @media (max-width: 767px) {
-	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand { margin-left: 15px; }
 	.navbar-collapse { border: 0; }
 	.navbar-dark .navbar-toggle { margin-top: 13px; border-color: transparent; }
-	.navbar-dark ul.navbar-nav li a { padding-top: 10px; padding-bottom: 10px; }
-
+	.navbar-dark .navbar-nav li  { padding-top: 10px; padding-bottom: 10px; color: white; border: 0; }
 }
 
+// MAP //
+#map_container { width: 92vw; }
+#map{ width: 99vw; height: 92vh; }
+// END MAP //
 
-
-
+// CREATE PROYECT - MODAL //
 .card-form {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
-
 .card-form .card-title {
   margin-bottom: 2rem;
   font-weight: 300;
   font-size: 1.5rem;
 }
-
-.card-form .card-body {
-  padding: 2rem;
-}
-
-.proyect-form {
-  width: 100%;
-}
-
+.card-form .card-body { padding: 2rem; }
+.proyect-form { width: 100%; }
 .proyect-form .btn {
   font-size: 80%;
   border-radius: 5rem;
@@ -60,7 +49,6 @@ ul.navbar-nav {
   padding: 1rem;
   transition: all 0.2s;
 }
-
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
@@ -75,16 +63,11 @@ ul.navbar-nav {
 	-o-transform: translate3d(0%, 0, 0);
 	transform: translate3d(0%, 0, 0);
 }
-
 .modal.right .modal-content {
 	height: 100%;
 	overflow-y: auto;
 }
-
-.modal.right .modal-body {
-	padding: 15px 15px 80px;
-}
-
+.modal.right .modal-body { padding: 15px 15px 80px; }
 .modal.right.fade .modal-dialog {
 	right: 320px;
 	-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
@@ -92,11 +75,12 @@ ul.navbar-nav {
 	-o-transition: opacity 0.3s linear, right 0.3s ease-out;
 	transition: opacity 0.3s linear, right 0.3s ease-out;
 }
+.modal.right.fade.show .modal-dialog { right: 0; }
+// END MODAL //
 
-.modal.right.fade.show .modal-dialog {
-	right: 0;
-}
-
+// SHOW PROYECT MODAL//
+#proyectModal {z-index:1;}  
+.modal-backdrop {background: none;z-index:-1;} 
 
 
 
