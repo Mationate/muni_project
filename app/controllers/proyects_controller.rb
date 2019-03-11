@@ -6,6 +6,7 @@ class ProyectsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@proyects) do|proyect, marker|
       marker.lat proyect.latitude  
       marker.lng proyect.longitude
+      marker.title proyect.title
     end
   end
 
