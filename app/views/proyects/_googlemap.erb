@@ -25,19 +25,5 @@ handler.buildMap({
     });
     handler.bounds.extendWith(Gmaps.store.markers);
     handler.fitMapToBounds();
-
-    //   markers_json = <%= raw hash.to_json %>;
-    //   markers = handler.addMarkers(markers_json); 
-    //   handler.bounds.extendWith(markers);
-    //   handler.fitMapToBounds();
-
-    //   for (var i = 0; i <  markers.length; i++) {
-    //     marker = markers[i];
-    //     google.maps.event.addListener(marker.getServiceObject(), 'click', function(object) {
-    //       marker.serviceObject.set('id', object.id);
-    //       $('#proyect-modal-title').text(marker.title);
-    //       $('#proyectModal').modal('show');
-    //     });
-    //   }
   }
 );

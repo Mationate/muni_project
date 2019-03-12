@@ -1,8 +1,8 @@
 <p><strong>Descripción:</strong> <%= proyect.description %></p>
 <p><strong>Presupuesto:</strong> <%= proyect.budget %></p>
 <p><strong>Dirección:</strong> <%= proyect.address %></p>
-<p><strong>Fecha de inicio:</strong> <%= proyect.start_date %></p>
-<p><strong>Fecha de término:</strong> <%= proyect.finish_date %></p>
+<p><strong>Fecha de inicio:</strong> <%= proyect.start_date.strftime("%d/%m/%Y") %></p>
+<p><strong>Fecha de término:</strong> <%= proyect.start_date.strftime("%d/%m/%Y") %></p>
 <% if can? :update, proyect %>
   <%= link_to 'Editar', edit_proyect_path(proyect), class:'btn btn-success btn-sm'%>
 <% end %>

@@ -1,29 +1,12 @@
 <div id="map_container">
   <div id="map"></div>
 </div>
-
-<table id="proyect-list" class="table table-striped">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Presupuesto</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-      <%= render @proyects %>
-  </tbody>
-</table>
-
-<%= render 'shared/create_proyect_modal', proyect: @proyect %>
-<%= render 'shared/proyect_modal' %>
-
 <script id="map_script">
   $(document).ready(function () {
     <%= render 'googlemap', hash: @hash %>
-  });
- 
+  }); 
 </script>
 
 
+<%= render 'shared/create_proyect_modal', proyect: @proyect %>
+<%= render 'shared/proyect_modal' %>
