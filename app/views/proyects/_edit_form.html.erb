@@ -1,0 +1,15 @@
+
+<div class="card-body" id="edit-form" >
+  <h5 class="card-title text-center">Editar</h5>
+  <%= form_with(model: proyect) do |f| %>
+    <div class="form-label-group">
+      <%= f.label :description, "Descripcion" %>
+      <%= f.text_area :description,class:'form-control', id:'edit-field' %>
+    </div>
+    <div class="form-label-group">
+      <%= f.label :finish_date, "Fecha de Término" %>
+      <%= f.date_field :finish_date, class:'form-control', id:'edit-field' %>
+    </div>
+    <%= f.submit "Editar", data: {remote: true}, class:'btn btn-primary btn-sm', id:'submit-edit' %>
+  <% end %>
+</div>

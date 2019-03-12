@@ -10,11 +10,10 @@ handler.buildMap({
   },
   function(){
     markers = <%= raw hash.to_json %>; // Fetch JSON with markers
-    Gmaps.store = {}; // Initialize storage
+    Gmaps.store = {}; 
     Gmaps.store.markers = markers.map(function(m) {
       marker = handler.addMarker(m);
       marker.serviceObject.set('id', m.id); 
-      marker.serviceObject.set('description', 'ahsodhaodh'); 
       google.maps.event.addListener(marker.getServiceObject(), 'click', function(object) {
         $.ajax({
           type: "GET",

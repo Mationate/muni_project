@@ -6,10 +6,8 @@ class ProyectsController < ApplicationController
     @feedback = Feedback.new
     @feedbacks = @proyect.feedbacks.order('id DESC')
     @hash = Gmaps4rails.build_markers(@proyects) do|proyect, marker|
-      # @proyect = proyect
       marker.lat proyect.latitude
       marker.lng proyect.longitude
-      # marker.infowindow render_to_string(partial: "shared/proyect_modal", locals: { proyect: proyect })
       marker.json({ title: proyect.title, id: proyect.id })
     end
 
@@ -32,10 +30,17 @@ class ProyectsController < ApplicationController
   end
 
   def edit
+    respond_to :js
   end
 
   def update
-    
+    respond_to do |format|
+      if @proyect.update(proyect_params)
+        format.js
+      else
+        format.html {redirect_to root_path, alert: 'Hubo un erro al actualizar el proyecto, intente nuevamente'}
+      end
+    end
   end
   
   

@@ -6,12 +6,12 @@ class Ability
     user ||= nil
     case user
     when Municipality
+      can :read, :all
       can :create, Proyect
       can :update, Proyect
-      can :read, :all
     when User
-      can :create, Feedback
       can :read, :all
+      can :create, Feedback
     else
       can :read, Proyect
     end

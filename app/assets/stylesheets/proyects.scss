@@ -67,7 +67,7 @@ ul.navbar-nav {
 	height: 100%;
 	overflow-y: auto;
 }
-.modal.right .modal-body { padding: 15px 15px 80px; }
+.modal.right .modal-body { padding: 15px ; }
 .modal.right.fade .modal-dialog {
 	right: 320px;
 	-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
@@ -81,6 +81,12 @@ ul.navbar-nav {
 // SHOW PROYECT MODAL//
 #proyectModal {z-index:1;}  
 .modal-backdrop {background: none;z-index:-1;} 
+
+#edit-form{
+    border: 1px solid #ccc;
+    padding: 14px;
+    background: #ececec;
+}	
 
 
 
