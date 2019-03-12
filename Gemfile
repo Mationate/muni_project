@@ -42,6 +42,8 @@ gem 'rails-i18n', '~> 5.1'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'chartkick'
+gem 'groupdate'
 
 
 group :development, :test do

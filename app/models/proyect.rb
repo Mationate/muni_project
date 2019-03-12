@@ -4,4 +4,8 @@ class Proyect < ApplicationRecord
   validates :title, :description, :budget, :address, :start_date, :finish_date, presence: true
   geocoded_by :address
   after_validation :geocode
+  has_many :feedbacks
+  def self.finished_by_day  
+    group_by_day(:finish_date).count 
+  end
 end
