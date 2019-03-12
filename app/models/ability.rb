@@ -8,7 +8,7 @@ class Ability
     when Municipality
       can :read, :all
       can :create, Proyect
-      can :update, Proyect
+      can :update, Proyect, municipality_id: user.id
     when User
       can :read, :all
       can :create, Feedback
