@@ -16,10 +16,10 @@ handler.buildMap({
       marker.serviceObject.set('id', m.id); 
       marker.serviceObject.set('description', 'ahsodhaodh'); 
       google.maps.event.addListener(marker.getServiceObject(), 'click', function(object) {
-        // FIXME: add info into modal for each marker
-        
-        $('#proyect-modal-title').text(m.title);
-        $('#proyectModal').modal('show');
+        $.ajax({
+          type: "GET",
+          url: " /proyects/"+m.id,
+        });
       });
       return marker;
     });

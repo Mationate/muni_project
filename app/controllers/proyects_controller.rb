@@ -6,10 +6,10 @@ class ProyectsController < ApplicationController
     @feedback = Feedback.new
     @feedbacks = @proyect.feedbacks.order('id DESC')
     @hash = Gmaps4rails.build_markers(@proyects) do|proyect, marker|
-
+      # @proyect = proyect
       marker.lat proyect.latitude
       marker.lng proyect.longitude
-
+      # marker.infowindow render_to_string(partial: "shared/proyect_modal", locals: { proyect: proyect })
       marker.json({ title: proyect.title, id: proyect.id })
     end
 
