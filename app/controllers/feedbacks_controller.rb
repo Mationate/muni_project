@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
       content: params[:feedback][:content],
       proyect_id: params[:proyect_id]
     )
-    @feedback.user = User.last
+    @feedback.user = current_user
     if @feedback.save
       respond_to :js
     else

@@ -1,32 +1,32 @@
-<h2>Municipalidad SignUp</h2>
-<%# TODO: BEAUTIFY THIS %>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="container" id="loginForm">
+  <div class="login-form">
+    <div class="main-div">
+      <div class="panel">
+        <h2>Registro municipalidad</h2>
+      </div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="form-label-group">
+          <%= f.text_field :name, class:'form-control', placeholder:'Municipalidad' %>
+        </div>
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'form-control', placeholder: 'Correo' %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, autocomplete: "new-password", class:'form-control', placeholder:'Contraseña (6 caractéres mínimo)' %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'form-control', placeholder:'Confirmar contraseña' %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Registrarse", class: 'btn btn-primary btn-sm' %>
+        </div>
+        <hr/>
+        <%= render "municipalities/shared/links" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-    <div class="form-label-group">
-    <%= f.label :name, 'Municipalidad' %><br />
-    <%= f.text_field :name, class:'form-control' %>
-    </div>
-    <div class="form-label-group">
-      <%= f.label :email, 'Correo'%><br />
-      <%= f.email_field :email, autocomplete: "email", class:'form-control' %>
-    </div>
 
-    <div class="form-label-group">
-      <%= f.label :password, 'Contraseña'%>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> caracteres mínimos)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class:'form-control' %>
-    </div>
 
-    <div class="form-label-group">
-      <%= f.label :password_confirmation, 'Confirme su contraseña'%><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'form-control' %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Registrarse", class: 'btn btn-primary btn-sm' %>
-    </div>
-<% end %>
-
-<%= render "municipalities/shared/links" %>
