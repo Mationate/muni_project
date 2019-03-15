@@ -52,6 +52,7 @@ ul.navbar-nav {
 // MEDIA QUERIES //
 @media (min-width: 992px) and (max-width: 1199px) {}
 @media (min-width: 768px) and (max-width: 991px) {
+  .login-form .btn.btn-facebook{}
   .navbar-collapse { border: 0; }
 	.navbar .navbar-toggle { margin-top: 13px; border-color: transparent; }
 	.navbar .navbar-nav li  { padding-top: 10px; padding-bottom: 10px; color: white; border: 0; }
@@ -166,10 +167,19 @@ ul.navbar-nav {
   border-color: #f0ad4e;
   color: #ffffff;
   font-size: 14px;
-  width: 100%;
+  width: 75%;
   height: 100%;
   line-height: 50px;
   padding: 0;
+  margin-bottom: 10px;
+}
+
+.login-form .btn.btn-facebook{
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 14px;
 }
 .forgot {
   text-align: left; margin-bottom:30px;
