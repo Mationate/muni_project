@@ -44,6 +44,7 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'chartkick'
 gem 'groupdate'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
