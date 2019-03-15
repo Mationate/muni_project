@@ -21,7 +21,7 @@
           <%= f.submit "Iniciar sesión", class:' btn btn-primary' %>
           <%- if devise_mapping.omniauthable? %>
             <%- resource_class.omniauth_providers.each do |provider| %>
-              <a href="<%= omniauth_authorize_path(resource_name, provider)%>"class="btn btn-block btn-social btn-facebook">
+              <a href="<%= user_facebook_omniauth_authorize_path(resource_name, provider)%>"class="btn btn-block btn-social btn-facebook">
                 <i class="fab fa-facebook-f"></i> <span>Iniciar con Facebook</span> 
               </a>
             <% end %>
