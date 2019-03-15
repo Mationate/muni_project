@@ -1,31 +1,70 @@
+
+html, body{height:100%;}
+
+body {
+//background-image:url("https://pbs.twimg.com/media/DigTbr9V4AEuzvz.jpg");
+//background-image:url("https://www.voyhoy.com/blog/wp-content/uploads/cerro-san-cristobal-santiago-vistas.jpg");
+//background-image:url("https://i.pinimg.com/originals/98/fb/15/98fb15565ab9bf17e98839640dcb60c6.jpg");
+//background-image:url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Santiago_depois_da_chuva_%2811%29.JPG");
+background-image:url('50.png');
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 // NAVBAR //
+// #f0ad4e
 .navbar {
 	margin-bottom: 0;
-	background: #444;
+  background: #f7f7f7;
+  background: #f7f7f7;
 	border: 0;
+}
+
+.navbar .btn-primary{
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 35px;
+  padding: 0;
+}
+.navbar-toggler-icon{
+  color: #f0ad4e;
 }
 ul.navbar-nav {
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 14px;
-	color: #fff;
-	font-weight: 400;
 	text-transform: uppercase;
+}
+.navbar-nav li{
+  padding-right: 10px;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: white;
 }
 // END NAVBAR //
 
-
 // MEDIA QUERIES //
 @media (min-width: 992px) and (max-width: 1199px) {}
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse { border: 0; }
+	.navbar .navbar-toggle { margin-top: 13px; border-color: transparent; }
+	.navbar .navbar-nav li  { padding-top: 10px; padding-bottom: 10px; color: white; border: 0; }
+}
 @media (max-width: 767px) {
 	.navbar-collapse { border: 0; }
-	.navbar-dark .navbar-toggle { margin-top: 13px; border-color: transparent; }
-	.navbar-dark .navbar-nav li  { padding-top: 10px; padding-bottom: 10px; color: white; border: 0; }
+	.navbar .navbar-toggle { margin-top: 13px; border-color: transparent; }
+	.navbar .navbar-nav li  { padding-top: 10px; padding-bottom: 10px; color: white; border: 0; }
 }
 
 // MAP //
 #map_container { width: 92vw; }
-#map{ width: 99vw; height: 92vh; }
+#map{ width: 100vw; height: 92vh; }
 // END MAP //
 
 // CREATE PROYECT - MODAL //
@@ -87,6 +126,64 @@ ul.navbar-nav {
     padding: 14px;
     background: #ececec;
 }	
+
+
+// LOGIN REGISTER FORMS //
+
+.form-heading { color:#fff; font-size:23px;}
+.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+}
+.main-div {
+  opacity: 0.9;
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 75%;
+  margin-top: 75px;
+  padding: 50px 70px 70px 71px;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ text-align:center;}
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  padding: 0;
+}
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+.botto-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
 
 
 

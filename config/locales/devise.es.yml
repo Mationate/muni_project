@@ -44,8 +44,8 @@ es:
       update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
       updated: "Actualizaste tu cuenta correctamente."
     sessions:
-      signed_in: "Iniciaste sesión correctamente."
-      signed_out: "Cerraste sesión correctamente."
+      signed_in: "Bienvenido! Iniciaste sesión correctamente."
+      signed_out: "Has cerrado sesión."
       already_signed_out: "Se cerró sesión correctamente."
     unlocks:
       send_instructions: "Recibirás un email con instrucciones para desbloquear tu cuenta en unos minutos"
