@@ -13,9 +13,9 @@ Rails.application.routes.draw do
     registrations: 'municipalities/registrations'
   }
   devise_for :users, path: 'users', controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
     sessions: 'users/sessions',
-    registrations: 'users/registrations',
-    omniauth_callbacks: 'users/omniauth_callbacks'
+    registrations: 'users/registrations'
   }
   root 'proyects#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
