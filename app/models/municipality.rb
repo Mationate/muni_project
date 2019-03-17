@@ -3,7 +3,7 @@ class Municipality < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :proyects
+  has_many :proyects, dependent: :destroy
   #has_many :answers
 
   def current_ability
