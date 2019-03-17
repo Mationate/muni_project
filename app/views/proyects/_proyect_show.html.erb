@@ -1,6 +1,7 @@
 <div id="proyect-<%= proyect.id%>">
   <p><strong>Descripción:</strong> <%= proyect.description %></p>
   <p><strong>Por:</strong> <%= proyect.municipality.name %></p>
+  <p><strong>Contacto:</strong> <%= proyect.municipality.email %></p>
   <p><strong>Presupuesto:</strong> <%= proyect.budget %></p>
   <p><strong>Dirección:</strong> <%= proyect.address %></p>
   <p><strong>Fecha de inicio:</strong> <%= proyect.start_date.strftime("%d/%m/%Y") %></p>

@@ -17,7 +17,7 @@ class ProyectsController < ApplicationController
     @proyect = Proyect.new(proyect_params)
     @proyect.municipality = current_municipality
     if @proyect.save
-      respond_to :js
+      redirect_to root_path
     else
       redirect_to root_path, alert: 'Error al crear proyecto'
     end
